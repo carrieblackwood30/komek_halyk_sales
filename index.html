@@ -2,122 +2,117 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Курс по урегулированию задолженности</title>
-  <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Komek Halyk — Курсы по управлению долгами</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#information">Информация</a></li>
-        <li><a href="#packages">Пакеты</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">komek halyk</a>
+      <nav class="nav">
+        <a href="#features">Возможности</a>
+        <a href="#testimonials">Отзывы</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#cta" class="btn btn-primary">Записаться</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Открыть меню">☰</button>
+    </div>
   </header>
-  <div class="logo">
-    <img src="src/logo.png" width="80" alt="">
-  </div>
-  <section class="hero">
-    <h1>Курс по урегулированию задолженности</h1>
-    <button><a href="#form">Записаться на курс</a></button>
-  </section>
-  <section class="information" id="information">
-    <h2>Информация</h2>
-    <p>
-        Этот курс предназначен для людей, которые хотят научиться эффективно работать с задолженностями, 
-        помогать клиентам решать финансовые проблемы и зарабатывать на этом. Вы получите практичные 
-        знания и инструменты для работы с    организациями (МФО), банками второго уровня, 
-        а также по снятию арестов.
-    </p>
-    <button><a href="#contacts">свяжитесь с нами</a></button>
-  </section>
-  <section class="packages" id="packages">
-    <h2>Пакеты</h2>
-   <div class="packages_info">
-    <div class="package basic">
-        <h3>Базовый пакет</h3>
-          <ul>
-              <li>- Обучение по работе с микрофинансовыми организациями (МФО).</li>
-              <li>- Пакет документов для взаимодействия с МФО.</li>
-              <li>- Снятие арестов: пошаговая инструкция.</li>
-              <li>- 2 недели теоретического обучения.</li>
-              <li>- 1 месяц чата поддержки и консультаций.</li>
-          </ul>
-        <p class="packages_price">59 990 KZT</p>
-      </div>
-      <div class="package advanced">
-        <h3>Продвинутый пакет</h3>
-          <ul>
-            <li>- Обучение по работе с МФО и банками второго уровня.</li>
-            <li>- Полный пакет документов для работы с МФО и банками.</li>
-            <li>- Информация и пошаговое обучение по снятию арестов.</li>
-            <li>- 1 месяц теоретического обучения.</li>
-            <li>- 2 месяца чата поддержки и консультаций.</li>
-          </ul>
-        <p class="packages_price">100 990 KZT</p>
-      </div>
-      <div class="package vip">
-        <h3>VIP-пакет</h3>
-          <ul>
-            <li>- Создание рабочей системы по регулированию задолженности.</li>
-            <li>- Обучение по МФО и банкам второго уровня.</li>
-            <li>- Полный пакет документов для работы с МФО и банками.</li>
-            <li>- Пошаговая инструкция по снятию арестов.</li>
-            <li>- Таргетированная реклама и скрипты продаж.</li>
-            <li>- 1 месяц обучения, 2 недели подготовки и запуска системы.</li>
-            <li>- 2 месяца индивидуального сопровождения.</li>
-          </ul>
-        <p class="packages_price">250 000 KZT</p>
-      </div>
-   </div>
-  </section>
-  <section class="form" id="form">
-    <h2>Форма</h2>
-    <form>
-      <label for="name">Имя:</label>
-      <input type="text" id="name" name="name">
-      <label for="phone">Телефон:</label>
-      <input type="tel" id="phone" name="phone">
-      <label for="package">Выбор пакета:</label>
-      <select id="package" name="package">
-        <option value="basic">Базовый пакет</option>
-        <option value="advanced">Продвинутый пакет</option>
-        <option value="vip">VIP-пакет</option>
-      </select>
-      <button>Записаться на курс</button>
-    </form>
-  </section>
 
-  <section class="contacts" id="contacts">
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Избавьтесь от долгов и обретите финансовую свободу</h1>
+        <p>Практический курс от экспертов: от анализа обязательств до реструктуризации и переговоров с кредиторами.</p>
+        <a href="#cta" class="btn btn-primary btn-lg">Начать обучение</a>
+      </div>
+    </section>
 
-    <div class="contacts_logo">
-        <img src="src/logo.png" width="150" alt="">
-        <h3>Курс по урегулированию задолженности</h3>
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Чему вы научитесь</h2>
+        <ul>
+          <li>Подробный разбор долговой нагрузки</li>
+          <li>Стратегии реструктуризации и консолидации</li>
+          <li>Техники переговоров с банками и коллекторами</li>
+          <li>Планирование бюджета и ускоренное погашение</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2>Успехи выпускников</h2>
+        <div class="testimonial-cards">
+          <blockquote>
+            «Снизил ежемесячный платёж в 2 раза и закрыл все долги за полгода.»
+            <cite>— Диана, Алматы</cite>
+          </blockquote>
+          <blockquote>
+            «Реальные шаги, понятные инструкции. Я восстановил кредитную историю.»
+            <cite>— Руслан, Шымкент</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2>Выберите пакет</h2>
+        <div class="pricing-cards">
+          <div class="card">
+            <h3>Базовый</h3>
+            <p class="price">15 000 ₸</p>
+            <ul>
+              <li>Видеоуроки и чек-листы</li>
+              <li>Шаблоны писем кредиторам</li>
+            </ul>
+            <a href="#cta" class="btn btn-secondary">Выбрать</a>
+          </div>
+          <div class="card featured">
+            <h3>Профессионал</h3>
+            <p class="price">25 000 ₸</p>
+            <ul>
+              <li>Все из базового пакета</li>
+              <li>Персональная консультация</li>
+              <li>Поддержка в чате 24/7</li>
+            </ul>
+            <a href="#cta" class="btn btn-primary">Выбрать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <div class="container">
+        <h2>Готовы начать путь к свободе от долгов?</h2>
+        <p>Оставьте заявку — и мы свяжемся с вами в течение часа.</p>
+        <form class="form">
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="tel" placeholder="Телефон или e-mail" required>
+          <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Komek Halyk. Все права защищены.</p>
+      <nav class="footer-nav">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Пользовательское соглашение</a>
+      </nav>
     </div>
-    
-    <div class="contacts_info">
-        <h2>Контакты</h2>
-        <a href="tel:+7 (705) 180 79-48"><p>+7 (705) 180 79-48</p></a>
-        <a href="tel:+7 (771) 493-03-23"><p>+7 (771) 493 03-23</p></a>
-        <a href="">
-            <img src="src/whatsapp.png" width="30" alt="">
-            <h4>+7 (705) 180 79-48</h4>
-        </a>
-        <a href="">
-            <img src="src/whatsapp.png" width="30" alt="">
-            <h4>+7 (771) 493 03-23</h4>
-        </a>
-        <a href="mailto:komekhalykkz@gmail.com">komekhalykkz@gmail.com</a>
-    </div>
+  </footer>
 
-  </section>
-    <footer>
-        <p>&copy; 2023 Курс по урегулированию задолженности</p>
-    </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('nav--open');
+    });
+  </script>
 </body>
 </html>
