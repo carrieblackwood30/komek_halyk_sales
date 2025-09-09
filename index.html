@@ -1,118 +1,140 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Komek Halyk — Курсы по управлению долгами</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo">komek halyk</a>
-      <nav class="nav">
-        <a href="#features">Возможности</a>
-        <a href="#testimonials">Отзывы</a>
-        <a href="#pricing">Тарифы</a>
-        <a href="#cta" class="btn btn-primary">Записаться</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Открыть меню">☰</button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Избавьтесь от долгов и обретите финансовую свободу</h1>
-        <p>Практический курс от экспертов: от анализа обязательств до реструктуризации и переговоров с кредиторами.</p>
-        <a href="#cta" class="btn btn-primary btn-lg">Начать обучение</a>
-      </div>
-    </section>
-
-    <section id="features" class="features">
-      <div class="container">
-        <h2>Чему вы научитесь</h2>
-        <ul>
-          <li>Подробный разбор долговой нагрузки</li>
-          <li>Стратегии реструктуризации и консолидации</li>
-          <li>Техники переговоров с банками и коллекторами</li>
-          <li>Планирование бюджета и ускоренное погашение</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <h2>Успехи выпускников</h2>
-        <div class="testimonial-cards">
-          <blockquote>
-            «Снизил ежемесячный платёж в 2 раза и закрыл все долги за полгода.»
-            <cite>— Диана, Алматы</cite>
-          </blockquote>
-          <blockquote>
-            «Реальные шаги, понятные инструкции. Я восстановил кредитную историю.»
-            <cite>— Руслан, Шымкент</cite>
-          </blockquote>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Komek Halyk — Курсы по управлению долгами</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="src/logo.png" alt="logo" width="50" />
+        <div>
+          <h3>Komek Halyk.kz</h3>
+          <p>Чек-листы по урегулированию задолженности</p>
         </div>
       </div>
-    </section>
 
-    <section id="pricing" class="pricing">
-      <div class="container">
-        <h2>Выберите пакет</h2>
-        <div class="pricing-cards">
-          <div class="card">
-            <h3>Базовый</h3>
-            <p class="price">15 000 ₸</p>
-            <ul>
-              <li>Видеоуроки и чек-листы</li>
-              <li>Шаблоны писем кредиторам</li>
-            </ul>
-            <a href="#cta" class="btn btn-secondary">Выбрать</a>
+      <div class="header__contacts">
+        <a href="tel:+77051807948"
+          ><img src="src/tel.svg" alt="tel" />+77051807948</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="action">
+        <h3>Кредиты, МФО, Аресты, Банки?</h3>
+        <h4>Чек-листы — скачай за 1 минуту!</h4>
+        <p>
+          Пошаговые инструкции, готовые шаблоны заявлений и проверенные
+          алгоритмы. Всё, чтобы навести порядок в финансах без дорогих юристов.
+        </p>
+        <a href="#action__checkLists">Перейти к чек-листам</a>
+      </section>
+
+      <section class="action__checkLists" id="action__checkLists">
+        <h3>Каталог чек-листов</h3>
+        <div class="cards-wrapper">
+          <div
+            class="card"
+            data-title="Чек-лист по графикам МФО"
+            data-price="5 990 ₸"
+            data-items='[
+              "Готовые шаблоны заявлений",
+              "Информация по всем МФО",
+              "Алгоритм согласования нового графика",
+              "Что делать при отказе",
+              "Бонус: как скачать кредитный отчёт",
+              "Бонус: отмена страховки"
+            ]'
+          >
+            <h3>Чек-лист по графикам МФО</h3>
+            <p>
+              Хотите новый график платежей без штрафов? Мы покажем, как
+              договориться с МФО, согласовать условия и зафиксировать новый
+              график.
+            </p>
+            <h4>5 990 ₸</h4>
+            <button class="action__checkLists__buyBtn">Купить</button>
+            <button class="action__checkLists__detailsBtn">Что внутри</button>
           </div>
-          <div class="card featured">
-            <h3>Профессионал</h3>
-            <p class="price">25 000 ₸</p>
-            <ul>
-              <li>Все из базового пакета</li>
-              <li>Персональная консультация</li>
-              <li>Поддержка в чате 24/7</li>
-            </ul>
-            <a href="#cta" class="btn btn-primary">Выбрать</a>
+
+          <div
+            class="card"
+            data-title="Чек-лист по банкам (реструктуризация)"
+            data-price="7 990 ₸"
+            data-items='[
+              "Подхожу ли я под условия реструктуризации",
+              "Список нужных документов",
+              "Пошаговый алгоритм подачи",
+              "Что делать при отказе",
+              "Бонус: как скачать и проверить кредитный отчёт"
+            ]'
+          >
+            <h3>Чек-лист по банкам (реструктуризация)</h3>
+            <p>
+              Долги в банке давят? Пошагово покажем, как снизить платежи и
+              получить реструктуризацию кредита.
+            </p>
+            <h4>7 990 ₸</h4>
+            <button class="action__checkLists__buyBtn">Купить</button>
+            <button class="action__checkLists__detailsBtn">Что внутри</button>
+          </div>
+
+          <div class="card" data-title="Чек-лист по арестам и разблокировке счетов" data-price="4 990 ₸" data-items='[
+            "Как узнать, кто поставил арест",
+            "Как отменить нотариальные надписи (шаблон внутри)",
+            "Как снять арест с зарплатной карты",
+            "Что делать, если нотариус прекратил деятельность",
+            "Как обжаловать решение суда",
+            "Бонус: постановка дела на медиацию"
+          ]'>
+            <h3>Чек-лист по арестам и разблокировке счетов</h3>
+            <p>Всё про аресты счетов: как понять причину и что делать, чтобы снять ограничения.</p>
+            <h4>4 990 ₸</h4>
+            <button class="action__checkLists__buyBtn">Купить</button>
+            <button class="action__checkLists__detailsBtn">Что внутри</button>
+          </div>
+
+          <div class="card" data-title="Чек-лист по внесудебному банкротству" data-price="9 990 ₸" data-items='[
+            "Что нужно знать перед подачей",
+            "Пошаговая инструкция подачи через eGov",
+            "Что делать после подачи",
+            "Как действовать при отказе",
+            "Бонус: как скачать и проверить кредитный отчёт"
+          ]'>
+            <h3>Чек-лист по внесудебному банкротству</h3>
+            <p>Не можешь платить кредиты? Узнай, как правильно оформить внесудебное банкротство и начать всё с нуля.</p>
+            <h4>9 990 ₸</h4>
+            <button class="action__checkLists__buyBtn">Купить</button>
+            <button class="action__checkLists__detailsBtn">Что внутри</button>
+          </div>
+
+          <div class="card full">
+            <h3>Пакет “Все чек-листы”</h3>
+            <p>Все чек-листы в одном комплекте — экономь время и до 8 000 ₸</p>
+
+            <h4>18 990 ₸</h4>
+            <button class="action__checkLists__buyBtn">Купить</button>
+          </div>
+
+          <div id="modalOverlay" class="modal-overlay">
+            <div class="modal-content">
+              <button class="close-btn" id="closeModal">✖</button>
+              <h2 id="modalTitle"></h2>
+              <ul id="modalList" class="action__checkLists__list"></ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="cta" class="cta">
-      <div class="container">
-        <h2>Готовы начать путь к свободе от долгов?</h2>
-        <p>Оставьте заявку — и мы свяжемся с вами в течение часа.</p>
-        <form class="form">
-          <input type="text" placeholder="Ваше имя" required>
-          <input type="tel" placeholder="Телефон или e-mail" required>
-          <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 Komek Halyk. Все права защищены.</p>
-      <nav class="footer-nav">
-        <a href="#">Политика конфиденциальности</a>
-        <a href="#">Пользовательское соглашение</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('nav--open');
-    });
-  </script>
-</body>
+      <section class="about">
+        <h3>Komek_Halyk.kz — команда, которой можно доверять</h3>
+        <p>Мы работаем более 2 лет, помогли тысячам клиентов и создали авторские чек-листы, которые пошагово помогают решать финансовые вопросы самостоятельно.</p>
+        <h3>Кому подходят чек-листы</h3>
+      </section>
+    </main>
+  </body>
 </html>
