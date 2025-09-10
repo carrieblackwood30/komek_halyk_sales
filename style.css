@@ -11,7 +11,7 @@
   --action-color: rgb(0, 153, 0);
   --secondary-action-color: rgb(0, 196, 0);
   --secondary-text-color: #666;
-  --price-color: gold;
+  --hero-action-color: rgb(189, 160, 0);
 }
 
 body {
@@ -93,7 +93,7 @@ section {
 .action h4 {
   font-size: clamp(20px, 3.6vw, 24px);
   font-weight: 900;
-  color: var(--action-color);
+  color: var(--hero-action-color);
 }
 
 .action p {
@@ -103,7 +103,7 @@ section {
 
 .action a {
   display: inline-block;
-  background: var(--action-color);
+  background: var(--hero-action-color);
   width: fit-content;
   color: #fff;
   border-radius: 14px;
@@ -238,4 +238,219 @@ section {
 @keyframes slideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+.about__checkLists {
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+}
+
+.about__checkLists h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.about__checkLists ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.about__checkLists ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Иконки ✅ и 🚫 */
+.about__checkLists h3:first-of-type::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.about__checkLists h3:nth-of-type(2)::before {
+  content: "🚫";
+  margin-right: 8px;
+}
+
+/* Галочки и крестики внутри списка */
+.about__checkLists ul:first-of-type li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.about__checkLists ul:nth-of-type(2) li::before {
+  content: "✖";
+  position: absolute;
+  left: 0;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+footer h3 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contacts a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contacts a:hover {
+  background-color: #e6f0ff;
+  transform: translateY(-2px);
+}
+
+.contacts img {
+  width: 24px;
+  height: 24px;
+}
+
+
+footer p{
+  margin: 2rem;
+  font-size: 16px;
+  color: #4d4c4c;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .header__logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header__contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+    gap: 6px;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .action h3,
+  .action__checkLists h3 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .action p,
+  .cards-wrapper .card p {
+    font-size: 1rem;
+  }
+
+  .action__checkLists__buyBtn,
+  .action__checkLists__detailsBtn {
+    width: 100%;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .about__checkLists {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .about__checkLists h3 {
+    font-size: 18px;
+  }
+
+  .about__checkLists ul li {
+    font-size: 15px;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+
+  footer h3 {
+    font-size: 20px;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .contacts a {
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .contacts img {
+    width: 20px;
+    height: 20px;
+  }
+
+  footer p {
+    font-size: 14px;
+    margin: 1rem;
+  }
 }
