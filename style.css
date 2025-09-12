@@ -73,6 +73,8 @@ button {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
+  color: var(--action-color);
+  font-weight: bold;
 }
 
 main {
@@ -93,7 +95,11 @@ section {
 .action h4 {
   font-size: clamp(20px, 3.6vw, 24px);
   font-weight: 900;
-  color: var(--hero-action-color);
+  color: var(--action-color);
+}
+
+span{
+  color: red;
 }
 
 .action p {
@@ -463,4 +469,31 @@ footer p{
 }
 .hide {
   display: none;
+}
+
+.langKz,
+.langRu {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #0077b6;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #0077b6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.langKz:hover,
+.langRu:hover {
+  background-color: #0077b6;
+  color: #ffffff;
+}
+
+.langKz.active,
+.langRu.active {
+  background-color: #023e8a;
+  color: #ffffff;
+  border-color: #023e8a;
 }

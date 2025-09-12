@@ -21,6 +21,11 @@ kzBtns.forEach(btn => {
   });
 });
 
+const updateActiveButtons = (lang) => {
+  kzBtns.forEach(btn => btn.classList.toggle('active', lang === 'kz'));
+  ruBtns.forEach(btn => btn.classList.toggle('active', lang === 'ru'));
+};
+
 const langChoose = () => {
   let lang = localStorage.getItem('lang');
   if (!lang) {
@@ -39,6 +44,7 @@ const langChoose = () => {
     ruBlock.classList.add('show');
     ruBlock.classList.remove('hide');
   }
+    updateActiveButtons(lang);
 };
 
 document.querySelectorAll('.action__checkLists__detailsBtn').forEach(btn => {
