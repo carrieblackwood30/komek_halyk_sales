@@ -112,34 +112,6 @@ span{
   font-weight: bolder;
 }
 
-.action a {
-  display: inline-block;
-  background: var(--hero-action-color);
-  width: fit-content;
-  color: #fff;
-  border-radius: 14px;
-  padding: 12px 18px;
-  font-weight: 700;
-  cursor: pointer;
-  text-align: center;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-.action__services{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.action__services h3 {
-  background: white;
-  border: 1px solid var(--action-color);
-  padding: .4rem;
-  font-size: .8rem;
-  border-radius: 40px;
-}
-
 .action__checkLists h3 {
   font-size: clamp(26px, 5vw, 40px);
   text-align: center;
