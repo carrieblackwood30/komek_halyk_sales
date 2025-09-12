@@ -454,3 +454,13 @@ footer p{
     margin: 1rem;
   }
 }
+
+.kz, .ru {
+  display: none;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
