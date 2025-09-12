@@ -107,6 +107,11 @@ span{
   font-size: 1.2rem;
 }
 
+.action p span{
+  color: black;
+  font-weight: bolder;
+}
+
 .action a {
   display: inline-block;
   background: var(--hero-action-color);
@@ -119,6 +124,20 @@ span{
   text-align: center;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.action__services{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.action__services h3 {
+  background: white;
+  border: 1px solid var(--action-color);
+  padding: .4rem;
+  font-size: .8rem;
+  border-radius: 40px;
 }
 
 .action__checkLists h3 {
@@ -410,6 +429,14 @@ footer p{
     margin: 0.5rem 0;
     font-size: 1rem;
   }
+
+  .action__services h3 {
+  background: white;
+  border: 1px solid var(--action-color);
+  padding: .2rem;
+  font-size: .8rem;
+  border-radius: 40px;
+}
 
   .modal-content {
     max-width: 90%;
