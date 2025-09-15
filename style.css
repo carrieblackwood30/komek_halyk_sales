@@ -178,7 +178,7 @@ span{
   background-color: #005fa3;
 }
 
-.modal-overlay {
+.modal-overlay, .modal-overlayKz {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -189,7 +189,7 @@ span{
   z-index: 1000;
 }
 
-.modal-overlay.show {
+.modal-overlay.show, .modal-overlayKz.show {
   display: flex;
   animation: fadeIn 0.3s ease forwards;
 }

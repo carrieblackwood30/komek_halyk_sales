@@ -1,72 +1,83 @@
-const modalOverlay = document.getElementById('modalOverlay');
-const modalTitle = document.getElementById('modalTitle');
-const modalList = document.getElementById('modalList');
-const closeModal = document.getElementById('closeModal');
-const kzBlock = document.querySelector('.kz');
-const ruBlock = document.querySelector('.ru');
-const ruBtns = document.querySelectorAll('.langRu');
-const kzBtns = document.querySelectorAll('.langKz');
+document.addEventListener('DOMContentLoaded', () => {
+  const overlays = {
+    ru: document.getElementById('modalOverlay'),
+    kz: document.getElementById('modalOverlayKz'),
+  };
+  const modalTitle = document.getElementById('modalTitle');
+  const modalTitleKz = document.getElementById('modalTitleKz');
+  const modalList  = document.getElementById('modalList');
+  const modalListKz  = document.getElementById('modalListKz');
+  const closeBtns  = document.querySelectorAll('.close-btn');
 
-ruBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    localStorage.setItem('lang', 'ru');
-    langChoose();
-  });
-});
+  const blocks = {
+    ru: document.querySelector('.ru'),
+    kz: document.querySelector('.kz'),
+  };
+  const langBtns = {
+    ru: document.querySelectorAll('.langRu'),
+    kz: document.querySelectorAll('.langKz'),
+  };
 
-kzBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    localStorage.setItem('lang', 'kz');
-    langChoose();
-  });
-});
+  function getLang() {
+    return localStorage.getItem('lang') || 'ru';
+  }
 
-const updateActiveButtons = (lang) => {
-  kzBtns.forEach(btn => btn.classList.toggle('active', lang === 'kz'));
-  ruBtns.forEach(btn => btn.classList.toggle('active', lang === 'ru'));
-};
-
-const langChoose = () => {
-  let lang = localStorage.getItem('lang');
-  if (!lang) {
-    lang = 'ru'; // язык по умолчанию
+  function setLang(lang) {
     localStorage.setItem('lang', lang);
+    langChoose();
   }
 
-  if (lang === 'kz') {
-    kzBlock.classList.remove('hide');
-    kzBlock.classList.add('show');
-    ruBlock.classList.remove('show');
-    ruBlock.classList.add('hide');
-  } else {
-    ruBlock.classList.remove('hide');
-    kzBlock.classList.remove('show');
-    ruBlock.classList.add('show');
-    ruBlock.classList.remove('hide');
-  }
-    updateActiveButtons(lang);
-};
+  function langChoose() {
+    const lang = getLang();
 
-document.querySelectorAll('.action__checkLists__detailsBtn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const card = btn.closest('.card');
+    Object.entries(blocks).forEach(([key, block]) => {
+      block.classList.toggle('show', key === lang);
+      block.classList.toggle('hide', key !== lang);
+    });
+
+    Object.entries(langBtns).forEach(([key, btns]) => {
+      btns.forEach(btn => btn.classList.toggle('active', key === lang));
+    });
+  }
+
+  langBtns.ru.forEach(btn => btn.addEventListener('click', () => setLang('ru')));
+  langBtns.kz.forEach(btn => btn.addEventListener('click', () => setLang('kz')));
+
+  document.addEventListener('click', e => {
+    if (!e.target.matches('.action__checkLists__detailsBtn')) return;
+    const card = e.target.closest('.card');
     const title = card.dataset.title;
-    const items = JSON.parse(card.dataset.items);
-
-    modalTitle.textContent = title;
-    modalList.innerHTML = items.map(item => `<li>${item}</li>`).join('');
-    modalOverlay.classList.add('show');
+    let items;
+    try {
+      items = JSON.parse(card.dataset.items);
+    } catch {
+      return;
+    }
+    if(getLang() === "ru"){
+      modalTitle.textContent = title;
+      modalList.innerHTML = items.map(i => `<li>${i}</li>`).join('');
+      overlays[getLang()].classList.add('show');
+    }
+    if(getLang() === "kz"){
+      modalTitleKz.textContent = title;
+      modalListKz.innerHTML = items.map(i => `<li>${i}</li>`).join('');
+      overlays[getLang()].classList.add('show');
+    }
   });
-});
 
-closeModal.addEventListener('click', () => {
-  modalOverlay.classList.remove('show');
-});
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      Object.values(overlays).forEach(o => o.classList.remove('show'));
+    });
+  });
 
-modalOverlay.addEventListener('click', (e) => {
-  if (e.target === modalOverlay) {
-    modalOverlay.classList.remove('show');
-  }
-});
+  Object.values(overlays).forEach(overlay => {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) {
+        overlay.classList.remove('show');
+      }
+    });
+  });
 
-langChoose();
+  langChoose();
+});
