@@ -81,3 +81,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   langChoose();
 });
+// Находим все кнопки "Купить / Сатып алу"
+document.querySelectorAll(".action__checkLists__buyBtn").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    // Проверяем, в каком блоке находится кнопка
+    if (btn.closest(".ru")) {
+      document.getElementById("buyModal").classList.add("show");
+    } else if (btn.closest(".kz")) {
+      document.getElementById("buyModalKz").classList.add("show");
+    }
+  });
+});
+
+// Закрытие русского окна
+document.getElementById("closeBuyModal").addEventListener("click", () => {
+  document.getElementById("buyModal").classList.remove("show");
+});
+
+// Закрытие казахского окна
+document.getElementById("closeBuyModalKz").addEventListener("click", () => {
+  document.getElementById("buyModalKz").classList.remove("show");
+});
+
+// Закрытие по клику вне окна
+document.getElementById("buyModal").addEventListener("click", (e) => {
+  if (e.target.id === "buyModal") {
+    document.getElementById("buyModal").classList.remove("show");
+  }
+});
+
+document.getElementById("buyModalKz").addEventListener("click", (e) => {
+  if (e.target.id === "buyModalKz") {
+    document.getElementById("buyModalKz").classList.remove("show");
+  }
+});

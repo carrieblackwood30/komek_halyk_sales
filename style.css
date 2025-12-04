@@ -154,6 +154,90 @@ span{
   font-size: 1.4rem;
 }
 
+.intro {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.intro h3 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--action-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.intro hr {
+  border: none;
+  border-top: 2px dashed var(--hero-action-color);
+  margin: 1.5rem 0;
+}
+
+.intro h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.intro ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.intro ol li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #444;
+}
+
+.intro ol li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: var(--action-color);
+  font-weight: bold;
+}
+
+.qr-block {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-block h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--action-color);
+  margin-bottom: 12px;
+}
+
+.qr-image {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
 .action__checkLists__buyBtn,
 .action__checkLists__detailsBtn {
   margin-right: 10px;
@@ -495,4 +579,92 @@ footer p{
   background-color: #023e8a;
   color: #ffffff;
   border-color: #023e8a;
+}
+
+.buy-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.buy-modal-overlay.show {
+  display: flex;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.buy-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease forwards;
+}
+
+.buy-modal-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--action-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buy-instructions {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.buy-instructions li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+}
+
+.buy-instructions li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: var(--action-color);
+  font-weight: bold;
+}
+
+.buy-instructions ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.buy-instructions ul li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.pay-link {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pay-link a {
+  display: inline-block;
+  background-color: #0078D4;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.pay-link a:hover {
+  background-color: #005fa3;
 }
