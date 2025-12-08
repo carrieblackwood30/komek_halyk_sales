@@ -512,6 +512,10 @@ footer p{
     font-size: 15px;
   }
 
+  .qr-block{
+    display: none;
+  }
+
   footer {
     padding: 30px 10px;
   }
